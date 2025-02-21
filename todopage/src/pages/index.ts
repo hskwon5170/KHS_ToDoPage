@@ -1,1 +1,1 @@
-export { TodoPage } from "./ui/todo-page"
+export { BoardPage } from "./ui/board-page"

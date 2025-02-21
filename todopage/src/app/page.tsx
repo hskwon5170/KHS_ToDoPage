@@ -1,8 +1,8 @@
-import { TodoPage } from "@/pages";
+import { BoardPage } from "@/pages";
 
 const Page = () => {
   return (
-    <TodoPage />
+    <BoardPage />
   )
 }
 
