@@ -10,7 +10,17 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends("next/core-web-vitals", "plugin:tailwindcss/recommended"),
+  {
+    rules: {
+      "linebreak-style": ["error", "unix"],
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "no-tabs": ["error"],
+      "semi": ["error", "never"],
+      "quotes": ["error", "double"],
+      "react/no-children-prop": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
