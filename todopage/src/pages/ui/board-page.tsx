@@ -6,7 +6,8 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 
 import { boardAtom } from "@/atom/board"
 
-import { BoardList } from "@/widgets"
+import { BoardList } from "@/widgets/index"
+
 
 export const BoardPage = () => {
   const columns = useAtomValue(boardAtom)

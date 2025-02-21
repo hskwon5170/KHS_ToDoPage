@@ -1,4 +1,4 @@
-import { BoardPage } from "@/pages";
+import { BoardPage } from "@/pages/index";
 
 const Page = () => {
   return (
