@@ -5,38 +5,46 @@ export type Board = {
   title: string;
   content: string;
   createdAt: string;
+  checkList: CheckItem[];
+}
+
+type CheckItem = {
+  id: string;
+  label: string;
+  isChecked: boolean;
 }
 
 export type Column = {
   id: string;
-  title: string;
-  color: string;
+  category: string;
+  color?: string;
   tasks: Board[];
 }
 
 export const boardAtom = atomWithStorage<Column[]>("board", [
   {
-    id: "todo",
-    title: "To-do",
+    id: "todo-column",
+    category: "To-do",
     color: "#ffd3d6",
     tasks: [
       {
         id: "1",
-        title: "Task 1",
-        content: "Content 1",
+        title: "샘플 데이터",
+        content: "샘플 데이터의 콘텐츠",
         createdAt: "2021-01-01",
+        checkList: [],
       },
     ],
   },
   {
-    id: "in-progress",
-    title: "In Progress",
+    id: "progress-column",
+    category: "In Progress",
     color: "#fbefd2",
     tasks: [],
   },
   {
-    id: "done",
-    title: "Done",
+    id: "done-column",
+    category: "Done",
     color: "#d1e9e3",
     tasks: [],
   },
