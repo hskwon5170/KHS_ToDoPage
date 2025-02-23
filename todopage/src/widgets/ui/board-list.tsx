@@ -64,8 +64,8 @@ export const BoardList = ({
         isOver && "bg-slate-100"
       )}
     >
-      <header className="flex h-10 w-full items-center justify-between gap-4">
-        <div className="flex flex-1 items-center gap-4">
+      <header className="flex h-10 w-full items-center justify-between">
+        <div className="flex flex-1 items-center gap-2">
           <Badge className="w-fit rounded-sm text-slate-950" style={{ backgroundColor: column.color }}>
             {column.category}
           </Badge>
@@ -78,7 +78,7 @@ export const BoardList = ({
         )}
       </header>
 
-      <ul className="flex w-full flex-col gap-2">
+      <ul className="flex size-full min-h-32 flex-col gap-4">
         {column.tasks.length > 0 ? (
           column.tasks.map((task) => (
             <li key={task.id}>
