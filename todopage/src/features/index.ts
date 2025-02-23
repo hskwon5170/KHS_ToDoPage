@@ -1,3 +1,5 @@
 export { Board } from "./ui/board"
 export { CreateBoardButton } from "./ui/create-board-button"
 export { checkListSchema } from "./model/board-schema"
+export { CardActionsMenu } from "./ui/card-actions-menu"
+export { DraggableCheckListItem } from "./ui/draggable-list-item"
