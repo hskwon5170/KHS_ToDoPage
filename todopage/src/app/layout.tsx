@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next"
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-import "./globals.css";
+import "./globals.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "칸반 투두 리스트",
@@ -36,11 +36,11 @@ export default function RootLayout({
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable}
-          antialiased flex flex-1 h-dvh flex-col items-center justify-center bg-slate-50
+          antialiased flex flex-1 h-dvh flex-col items-center justify-center bg-gray-100
           `)}
       >
         {children}
       </body>
     </html>
-  );
+  )
 }
