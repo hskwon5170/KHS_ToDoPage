@@ -45,7 +45,7 @@ export const DraggableCheckListItem = ({
   onCheckChange,
   onDelete
 }: DraggableCheckListItemProps) => {
-  const [_board, setBoard] = useAtom(boardAtom)
+  const [board, setBoard] = useAtom(boardAtom)
 
   const [isEdit, setIsEdit] = useState(false)
   const [editedLabel, setEditedLabel] = useState(item.label)
@@ -103,6 +103,15 @@ export const DraggableCheckListItem = ({
       const hoverIndex = index
 
       if (dragIndex === hoverIndex) {
+        return
+      }
+
+      const boardItem = board.find(column =>
+        column.tasks.some(task => task.id === item.taskId)
+      )
+      const task = boardItem?.tasks.find(task => task.id === item.taskId)
+
+      if (task?.checkList.length === 1) {
         return
       }
 
