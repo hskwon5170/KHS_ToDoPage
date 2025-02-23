@@ -15,7 +15,7 @@ export const BoardPage = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="mx-auto flex size-full max-w-7xl flex-col gap-12">
+      <div className="mx-auto flex size-full max-w-7xl flex-col gap-12 py-10">
         <h1 className="flex items-center gap-3 text-4xl font-bold text-gray-800">
           <Kanban className="size-10 text-indigo-600" />
           Kanban Todo
