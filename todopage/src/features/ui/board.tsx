@@ -99,6 +99,7 @@ export const Board = ({
         tasks: column.tasks.filter(t => t.id !== task.id)
       }))
     )
+    toast("보드가 삭제되었습니다.")
   }
 
   const handleSave = () => {
