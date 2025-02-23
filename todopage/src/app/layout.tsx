@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable}
-          antialiased flex flex-1 h-dvh flex-col items-center justify-center bg-gray-100
+          antialiased flex flex-1 h-full flex-col items-center justify-center bg-gray-100
           `)}
       >
         {children}
