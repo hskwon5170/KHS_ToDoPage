@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 
+import { Toaster } from "@/shared/ui/sonner"
+
 import "./globals.css"
 
 const geistSans = Geist({
@@ -36,10 +38,11 @@ export default function RootLayout({
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable}
-          antialiased flex flex-1 h-dvh flex-col items-center justify-center bg-gray-100
+          antialiased flex flex-1 h-dvh flex-col items-center justify-center bg-gray-100 py-10
           `)}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   )
