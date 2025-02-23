@@ -1,6 +1,6 @@
 "use client"
 
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from "uuid"
 import { Plus } from "lucide-react"
 import { useAtom } from "jotai/react"
 
@@ -13,10 +13,10 @@ export const CreateBoardButton = () => {
 
   const handleCreateBoard = () => {
     setBoard(previousData => {
-      const todoColumnIndex = previousData.findIndex(col => col.id === "todo-column");
-      if (todoColumnIndex === -1) return previousData;
+      const todoColumnIndex = previousData.findIndex(col => col.id === "todo-column")
+      if (todoColumnIndex === -1) return previousData
 
-      const newData = [...previousData];
+      const newData = [...previousData]
       newData[todoColumnIndex] = {
         ...newData[todoColumnIndex],
         tasks: [...newData[todoColumnIndex].tasks, {
@@ -32,9 +32,9 @@ export const CreateBoardButton = () => {
             }
           ],
         }]
-      };
-      return newData;
-    });
+      }
+      return newData
+    })
   }
 
   return (
