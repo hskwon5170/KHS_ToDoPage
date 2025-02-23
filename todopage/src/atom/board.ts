@@ -26,15 +26,7 @@ export const boardAtom = atomWithStorage<Column[]>("board", [
     id: "todo-column",
     category: "To-do",
     color: "#ffd3d6",
-    tasks: [
-      {
-        id: "1",
-        title: "샘플 데이터",
-        content: "샘플 데이터의 콘텐츠",
-        createdAt: "2021-01-01",
-        checkList: [],
-      },
-    ],
+    tasks: [],
   },
   {
     id: "progress-column",
